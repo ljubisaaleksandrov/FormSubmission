@@ -1,0 +1,20 @@
+﻿@using FormSubmission.Models
+@model List<Comment>
+
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h1>User Comments</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.Partial("_CommentsList", Model)
+    </div>
+    <div>
+        @Html.Partial("_NewCommentForm", new Comment())
+    </div>
+</div>
